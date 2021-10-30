@@ -1,0 +1,39 @@
+.homepage__container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.db__container,
+.api__container {
+  margin-top: 10px;
+  text-align: center !important;
+  height: 20vh;
+}
+
+.line {
+  border: solid 1px white;
+}
+
+.dbcontenet__head,
+.apicontenet__head {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 23px;
+}
+
+.heading__container > p {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+}
+
+.api__container > a,
+.db__container > a {
+  background-color: black;
+  border: solid 1px green;
+}
+
+.footer__container > p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+}

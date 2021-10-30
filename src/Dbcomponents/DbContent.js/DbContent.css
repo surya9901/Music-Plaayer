@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+#dbcard__container {
+  margin: 1rem 2rem;
+}
+
+#dbcard__body > h5 {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 15px;
+}
+
+#db__notice {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#addsongs__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+}
+
+#addsongs__container > a > button {
+  background-color: black;
+  border: black;
+  font-weight: bold;
+  padding: 9px 5px;
+  color: green;
+}
+
+#addsongs__container > a > button:hover {
+  border: black;
+  border-radius: 1rem 1rem;
+  background-color: rgb(46, 46, 46);
+  color: white;
+}
+
+#dbcard__body > p {
+  text-align: center;
+}
+
+.db-loader {
+  text-align: -webkit-center;
+}

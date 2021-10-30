@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
+
+import Navbar from './Components/Navbar/Navbar'
+import Content from './Components/Content/Content';
+import Homepage from './Components/Homepage/Homepage';
+import Player from './Components/Player/Player';
+import DbContent from './Dbcomponents/DbContent.js/DbContent';
+import Addsong from './Dbcomponents/Addsongs/Addsong';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" component={Homepage} exact />
+          <Route path="/apimusic" component={Content} exact />
+          <Route path="/DbContent" component={DbContent} exact />
+          <Route path="/addsong" component={Addsong} exact />
+          <Route path="/Player/:id" component={Player} exact />
+        </Switch>
+      </Router>
+    </>
   );
 }
 

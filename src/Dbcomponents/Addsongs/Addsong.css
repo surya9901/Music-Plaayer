@@ -1,0 +1,24 @@
+#dbsearch__container {
+  text-align: -webkit-center;
+}
+
+#dbsearch__container > hr {
+  color: grey;
+  margin-top: 30px;
+  border: solid 1px;
+}
+
+#addcard__container {
+  margin: 2rem;
+}
+
+#addcard__container > h1 {
+  text-align: -webkit-center;
+}
+
+#addcard__body > h5 {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 15px;
+}
