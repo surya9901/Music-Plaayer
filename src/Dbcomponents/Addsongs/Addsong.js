@@ -1,16 +1,18 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
-import './Addsong.css'; 
+import './Addsong.css';
 import env from '../../settings';
 
 function Addsong() {
 
     const [songInput, setSongInput] = useState("")
-    const [search, setSearch] = useState(false)
     const [toAddData, setToAddData] = useState([])
-    const [load, setLoad] = useState(false)
     const finalData = []
+
+    const [load, setLoad] = useState(false)
+    const [search, setSearch] = useState(false)
+
     let history = useHistory();
 
     let songSearch = async () => {
@@ -31,10 +33,9 @@ function Addsong() {
             setSearch(false)
         } catch (error) {
             setTimeout(() => {
-                alert("Time Out!")
-                history.push("/DbContent")
-                alert("Sorry for the Inconvinece the Api did not support the search you were looking for!")
-                console.log(error)
+            alert("Improper Link!")
+            history.push("/DbContent")
+            console.log(error)
             }, 10000);
 
         }
@@ -43,7 +44,7 @@ function Addsong() {
     let handleadd = async (data) => {
         try {
             setLoad(true)
-            let postData = await axios.post(`${env.api}/addSong/${data.albumid}`, { data })
+            let postData = await axios.post(`http://localhost:3001/addSong/${data.albumid}`, { data })
             setLoad(false)
             history.push("/DbContent")
         }

@@ -47,7 +47,7 @@ function DbContent() {
                             var songname = obj.song;
                             songname = songname.replace(/&quot;/g, '"');
                             return (
-                                <div className="card-group col-lg-3 mt-2" id="dbcard__group">
+                                <div className="card-group col-lg-3 mt-3" id="dbcard__group">
                                     <div className="card bg-dark" id="dbcard">
                                         <img src={obj.images["500x500"]} style={{ "padding": "10px", "borderRadius": "15px" }} className="card-img-top" alt="song" />
                                         <div className="card-body" id="dbcard__body">
