@@ -44,7 +44,7 @@ function Addsong() {
     let handleadd = async (data) => {
         try {
             setLoad(true)
-            let postData = await axios.post(`${env.api}}/addSong/${data.albumid}`, { data })
+            let postData = await axios.post(`${env.api}/addSong/${data.albumid}`, { data })
             setLoad(false)
             history.push("/DbContent")
         }
