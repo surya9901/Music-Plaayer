@@ -39,11 +39,13 @@ function Addsong() {
                     alert("This link is broken, kindly Search for a different Music!")
                     console.log(error)
                 }, 15000);
-
+                setSearch(false)
             }
         } else {
             alert("No Input Found!")
+            setSearch(false)
         }
+        setSearch(false)
     }
 
     let handleadd = async (data) => {
