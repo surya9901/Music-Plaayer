@@ -17,28 +17,32 @@ function Addsong() {
 
     let songSearch = async () => {
         setSearch(true)
-        setSongInput("")
-        try {
-            let data = await axios.get(`${env.musicapi}${songInput}`)
-            for (let i = 0; i < data.data.results.length; i++) {
-                let api_data = data.data.results[i].id
-                var finalapi_data = [api_data]
-                for (let j = 0; j < finalapi_data.length; j++) {
-                    var finaldata_id = finalapi_data[j]
-                    var finalsongdata = await axios.get(`${env.finalmusicapi}${finaldata_id}`)
-                    finalData.push(finalsongdata.data)
+        if (songInput != "") {
+            setSongInput("")
+            try {
+                let data = await axios.get(`${env.musicapi}${songInput}`)
+                for (let i = 0; i < data.data.results.length; i++) {
+                    let api_data = data.data.results[i].id
+                    var finalapi_data = [api_data]
+                    for (let j = 0; j < finalapi_data.length; j++) {
+                        var finaldata_id = finalapi_data[j]
+                        var finalsongdata = await axios.get(`${env.finalmusicapi}${finaldata_id}`)
+                        finalData.push(finalsongdata.data)
+                    }
+                    setToAddData(finalData)
                 }
-                setToAddData(finalData)
-            }
-            setSearch(false)
-        } catch (error) {
-            setTimeout(() => {
-                alert("Improper Link!")
-                history.push("/DbContent")
-                alert("This link is broken, kindly Search for a different Music!")
-                console.log(error)
-            }, 15000);
+                setSearch(false)
+            } catch (error) {
+                setTimeout(() => {
+                    alert("Improper Link!")
+                    history.push("/DbContent")
+                    alert("This link is broken, kindly Search for a different Music!")
+                    console.log(error)
+                }, 15000);
 
+            }
+        } else {
+            alert("No Input Found!")
         }
     }
 
