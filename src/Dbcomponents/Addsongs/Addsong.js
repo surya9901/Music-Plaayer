@@ -34,7 +34,7 @@ function Addsong() {
         } catch (error) {
             setTimeout(() => {
             alert("Improper Link!")
-            history.push("/addSong")
+            history.push("/DbContent")
             alert("This link is broken, kindly Search for a different Music!")
             console.log(error)
             }, 15000);
