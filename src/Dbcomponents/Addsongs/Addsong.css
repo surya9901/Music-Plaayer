@@ -12,7 +12,7 @@
   margin: 2rem;
 }
 
-#addcard__container > h1 {
+#addcard__container > .row > h1 {
   text-align: -webkit-center;
 }
 
@@ -21,4 +21,23 @@
   font-weight: bold;
   color: black;
   font-size: 15px;
+}
+
+#searchcard__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#searchcard__container > a {
+  background-color: black;
+  border: black;
+  font-weight: bold;
+  color: green;
+  text-decoration: none;
+}
+
+#searchcard__container > a:hover {
+  border: black;
+  transition: 900ms;
+  color: white;
 }

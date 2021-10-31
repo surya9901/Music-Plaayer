@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import './Addsong.css';
 import env from '../../settings';
 
@@ -33,10 +33,10 @@ function Addsong() {
             setSearch(false)
         } catch (error) {
             setTimeout(() => {
-            alert("Improper Link!")
-            history.push("/DbContent")
-            alert("This link is broken, kindly Search for a different Music!")
-            console.log(error)
+                alert("Improper Link!")
+                history.push("/DbContent")
+                alert("This link is broken, kindly Search for a different Music!")
+                console.log(error)
             }, 15000);
 
         }
@@ -70,10 +70,15 @@ function Addsong() {
             </div>
 
             <div className="card-container" id="addcard__container">
-                <h2>Search results:</h2>
-                {!search ? "" : <h1>Searching...</h1>}
-                {!load ? "" : <h1>Adding...</h1>}
                 <div className="row">
+                    <div className="searchcard-conatiner text-center" id="searchcard__container">
+                        <h2>Search results:</h2>
+                        <Link to="/DbContent" className="btn btn-dark">
+                            <i className="fa fa-chevron-left" aria-hidden="true"></i> Go back
+                        </Link>
+                    </div>
+                    {!search ? "" : <h1>Searching...</h1>}
+                    {!load ? "" : <h1>Adding...</h1>}
                     {
                         toAddData.map((obj) => {
                             var songname = obj.song;

@@ -1,0 +1,13 @@
+#apiplayerback:hover {
+  background-color: white;
+  color: red;
+  transition: 900ms;
+  border: solid 1px white;
+}
+
+#apiplayerback {
+  text-decoration: none;
+  font-size: 15px;
+  padding: 6px;
+  font-weight: bold;
+}
