@@ -35,8 +35,9 @@ function Addsong() {
             setTimeout(() => {
             alert("Improper Link!")
             history.push("/addSong")
+            alert("This link is broken, kindly Search for a different Music!")
             console.log(error)
-            }, 10000);
+            }, 15000);
 
         }
     }
