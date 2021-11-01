@@ -8,9 +8,8 @@ function Homepage() {
         <div className="heading__container text-center mt-3">
             <p>
                 Hello there 👋 <br />
-                This is an Open Source Online Music Web App. <br />
-                The Music data and the Api for this App is from the Unofficial Saavan Api. <br />
-                You can listen to songs for Free and Ad free in this App.
+                This is an Online Music Web Application. <br />
+                You can listen to songs for free and Ad free.
             </p>
             <div className="homepage__container mt-5">
                 <div className="db__container">
